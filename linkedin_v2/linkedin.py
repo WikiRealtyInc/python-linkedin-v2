@@ -190,7 +190,7 @@ class LinkedInApplication(object):
         self.authentication = authentication
         if not self.authentication:
             self.authentication = LinkedInAuthentication('', '', '')
-            self.authentication.token = AccessToken(token, None)
+            self.authentication.token = AccessToken(token, None, None, None)
 
     def make_request(self, method, url, data=None, params=None, headers=None,
                      timeout=TIMEOUT):
